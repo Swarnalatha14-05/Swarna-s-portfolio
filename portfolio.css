@@ -1,0 +1,263 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a8edea, #fed6e3); 
+    padding-top: 70px;
+    /*padding: 50px;*/
+  }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #fff;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color:black;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+.nav-left a:hover {
+  color: #00bcd4;
+}
+
+.name {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+  .box {
+    width: 45%;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
+  }
+  
+  .box h2 {
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .box p {
+    margin-bottom: 10px;
+    color:black;
+  }
+  
+  .box a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .box a:hover {
+    text-decoration: underline;
+  }
+  
+  .box:hover {
+    background-color:cadetblue;
+    transform: translateY(-5px); 
+  }
+  
+ 
+  .left {
+    float: left;
+    clear: both;
+    margin-right: 5%;
+  }
+  
+  
+  .right {
+    float: right;
+    clear: both;
+    margin-left: 5%;
+  }
+  
+  .line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #007BFF;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .portfolio::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  
+  /* Media query for tablets (width <= 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .portfolio {
+    gap: 15px; /* Reduce spacing for smaller screens */
+  }
+
+  .nav-left {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-left a {
+    font-size: 14px;
+  }
+
+  .name {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .box {
+    width: 100%; /* Full width for smaller screens */
+    margin: 10px 0;
+  }
+
+  .left, .right {
+    float: none; /* Remove float for smaller screens */
+    margin: 0;
+  }
+
+  .line {
+    display: none; /* Hide the connecting line */
+  }
+
+  body {
+    padding: 30px;
+  }
+}
+
+/* Media query for mobile phones (width <= 480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .nav-left {
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .portfolio {
+    gap: 10px;
+  }
+  .nav-left a {
+    font-size: 12px;
+  }
+
+  .name {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  body {
+    padding: 20px;
+  }
+
+  .box {
+    width: 100%; /* Full width */
+    padding: 15px;
+    margin: 5px 0;
+  }
+
+  .box h2 {
+    font-size: 18px;
+  }
+
+  .box p, .box a {
+    font-size: 14px;
+  }
+}
+
+/* Media query for large screens (width >= 1200px) */
+@media (min-width: 1200px) {
+  .portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .box {
+    margin: 20px 2.5%;
+  }
+
+  .line {
+    width: 2px;
+    background-color: #007BFF;
+  }
+}
+/* General Styling */
+.portfolio {
+  display: flex;
+  flex-direction: column; /* Stack boxes vertically */
+  gap: 20px; /* Add spacing between sections */
+}
+
+/* Box Styling */
+.box {
+  width: 100%; /* Full width by default */
+  max-width: 600px; /* Limit the width for readability */
+  margin: 0 auto; /* Center the boxes */
+  position: relative; /* Position relative for hover effects */
+}
+
+/* Line Styling */
+.line {
+  display: none; /* Hide the line for simplicity */
+}
+@media (max-width: 768px) {
+  .box {
+    width: 100%;
+  }
+
+  .line {
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h2 {
+    font-size: 1.2rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
